@@ -26,12 +26,8 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-        return response('xoa', 200)
-                  ->header('Content-Type', 'text/event-stream')
-                  ->header('Connection', 'keep-alive')
-                  ->header('Cache-Control', 'no-cache');
-		//$cmd = User::first();
-		//return $cmd->cmd;
+		$cmd = User::first();
+		return $cmd->cmd;
     }
 	
 	public function add(Request $request)
