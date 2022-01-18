@@ -26,8 +26,11 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-		$cmd = User::first();
-		return $cmd->cmd;
+        while(true){
+            sleep(1000);
+        }
+		//$cmd = User::first();
+		//return $cmd->cmd;
     }
 	
 	public function add(Request $request)
